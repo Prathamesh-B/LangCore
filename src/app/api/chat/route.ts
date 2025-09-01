@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { type Message, LangChainAdapter } from 'ai';
 import { createReactAgent } from '@langchain/langgraph/prebuilt';
-import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
+import { ChatGoogleGenerativeAI } from '@langchain/google-genai';
 import { SystemMessage } from '@langchain/core/messages';
 import { convertVercelMessageToLangChainMessage } from '@/utils/message-converters';
 import { logToolCallsInDevelopment } from '@/utils/stream-logging';
@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
       .map(convertVercelMessageToLangChainMessage);
 
     const llm = new ChatGoogleGenerativeAI({
-      model: "gemini-2.5-flash",
+      model: 'gemini-2.5-flash',
       temperature: 0,
       apiKey: process.env.GOOGLE_API_KEY,
     });

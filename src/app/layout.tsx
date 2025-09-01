@@ -15,7 +15,6 @@ const TITLE = 'Auth0 Assistant0: An Auth0 + LangChain + Next.js Template';
 const DESCRIPTION = 'Starter template showing how to use Auth0 in LangChain + Next.js projects.';
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-
   const session = await auth0.getSession();
 
   return (
@@ -45,8 +44,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               {session && (
                 <>
                   <div className="flex items-center gap-2 px-4 text-white">Welcome, {session.user.name}!</div>
-                  <Button asChild variant="destructive" size="default" className='mx-2'>
-                    <a href="/auth/logout" className='flex items-center gap-2'>
+                  <Button asChild variant="destructive" size="default" className="mx-2">
+                    <a href="/auth/logout" className="flex items-center gap-2">
                       <LogOut />
                       <span>Log Out</span>
                     </a>
