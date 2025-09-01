@@ -1,5 +1,9 @@
-# 🚀 LangCore
+<p align="center">
+  <img width="300" alt="2" src="https://github.com/user-attachments/assets/5b55a971-d869-4be0-b910-206a1c5ec439" />
+<p align="center">
 
+    
+# 🚀 LangCore 
 A modern AI assistant powered by LangGraph.js and Next.js, featuring secure authentication and real-time interactions.
 
 ## 🌟 Overview
