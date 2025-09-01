@@ -34,11 +34,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body className={publicSans.className}>
         <div className="bg-secondary grid grid-rows-[auto,1fr] h-[100dvh]">
           <div className="grid grid-cols-[1fr,auto] gap-2 p-4 bg-black/25">
-            <div className="flex gap-4 flex-col md:flex-row md:items-center">
+            <div className="flex gap-0 flex-col md:flex-row md:items-center">
+              <img src="/images/logo.png" alt="Logo" className="h-10 " />
               <span className={`${robotoMono.className} text-white text-2xl`}>LangCore</span>
-              <nav className="flex gap-1 flex-col md:flex-row">
-                <ActiveLink href="/">Chat</ActiveLink>
-              </nav>
             </div>
             <div className="flex justify-center">
               {session && (

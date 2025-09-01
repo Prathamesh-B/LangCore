@@ -34,7 +34,6 @@ export default async function Home() {
     <GuideInfoBox>
       <ul>
         <li className="text-l">
-          🚀
           <span className="ml-2">
             Welcome to LangCore - Your secure, multi-step interactive AI assistant powered by{' '}
             <a className="text-blue-500" href="https://langchain-ai.github.io/langgraphjs/" target="_blank">
