@@ -55,7 +55,7 @@ export default async function Home() {
   return (
     <ChatWindow
       endpoint="api/chat"
-      emoji="🤖"
+      image="images/logo.png"
       placeholder="I'm your personal assistant. How can I help you today?"
       emptyStateComponent={InfoCard}
     />

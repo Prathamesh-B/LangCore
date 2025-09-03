@@ -2,7 +2,7 @@ import type { Message } from 'ai/react';
 
 import { cn } from '@/utils/cn';
 
-export function ChatMessageBubble(props: { message: Message; aiEmoji?: string; sources: any[] }) {
+export function ChatMessageBubble(props: { message: Message; aiImage?: string; sources: any[] }) {
   return (
     <div
       className={cn(
@@ -12,8 +12,15 @@ export function ChatMessageBubble(props: { message: Message; aiEmoji?: string; s
       )}
     >
       {props.message.role !== 'user' && (
-        <div className="mr-4 border bg-secondary -mt-2 rounded-full w-10 h-10 flex-shrink-0 flex items-center justify-center">
-          {props.aiEmoji}
+        <div className="mr-4 border bg-secondary -mt-2 rounded-full w-11 h-11 flex-shrink-0 flex items-center justify-center">
+          {/* {props.aiEmoji} */}
+          {props.aiImage && (
+            <img
+              src={props.aiImage}
+              alt="AI"
+              className="w-8 h-8 object-contain"
+            />
+          )}
         </div>
       )}
 
