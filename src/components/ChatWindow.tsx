@@ -16,7 +16,7 @@ function ChatMessages(props: {
   messages: Message[];
   emptyStateComponent: ReactNode;
   sourcesForMessages: Record<string, any>;
-  aiEmoji?: string;
+  aiImage?: string;
   className?: string;
 }) {
   return (
@@ -27,7 +27,7 @@ function ChatMessages(props: {
           <ChatMessageBubble
             key={m.id}
             message={m}
-            aiEmoji={props.aiEmoji}
+            aiImage={props.aiImage}
             sources={props.sourcesForMessages[sourceKey]}
           />
         );
@@ -118,7 +118,7 @@ export function ChatWindow(props: {
   endpoint: string;
   emptyStateComponent: ReactNode;
   placeholder?: string;
-  emoji?: string;
+  image?: string;
 }) {
   const [sourcesForMessages, setSourcesForMessages] = useState<Record<string, any>>({});
 
@@ -165,7 +165,7 @@ export function ChatWindow(props: {
             <div>{props.emptyStateComponent}</div>
           ) : (
             <ChatMessages
-              aiEmoji={props.emoji}
+              aiImage={props.image}
               messages={chat.messages}
               emptyStateComponent={props.emptyStateComponent}
               sourcesForMessages={sourcesForMessages}
